@@ -24,6 +24,7 @@ services:
     volumes:
       - ../sites:/app
       - ./php-fpm/php-ini-overrides.ini:/usr/local/etc/php/conf.d/99-overrides.ini
+      - ./php-fpm/fpm-overrides.conf:/usr/local/etc/php-fpm.d/z-overrides.conf
     networks:
       sites-net:
         ipv4_address: 10.5.0.6
