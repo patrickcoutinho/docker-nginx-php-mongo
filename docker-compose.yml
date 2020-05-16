@@ -29,8 +29,6 @@ services:
       sites-net:
         ipv4_address: 10.5.0.6
     privileged: true
-    environment:
-      XDEBUG_CONFIG: "remote_host=host.docker.internal remote_port=9001 remote_enable=1 remote_autostart=1"
 
   mongodb:
     container_name: sites-mongo
@@ -40,7 +38,7 @@ services:
       - "21038:21038"
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: tko7510
+      MONGO_INITDB_ROOT_PASSWORD: 1234567890
       MONGO_INITDB_DATABASE: devdb
     networks:
       sites-net:
